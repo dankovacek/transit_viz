@@ -2,7 +2,7 @@
 
 ## To use:
 
-1.  Log into your compass account
+1.  Log into your <a href="https://www.compasscard.ca/">compass account</a>
 2.  Download as much of your trip history as you want to use
 3.  Concatenate your trip history into one csv.
     Note, don't change the column formatting or header row.

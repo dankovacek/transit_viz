@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bokeh Plot</title>
+        
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.4.min.css" type="text/css" />
+        
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.4.min.js"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
+        <style>
+          html {
+            width: 100%;
+            height: 100%;
+          }
+          body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+          }
+        </style>
+    </head>
+    <body>
+        
+        <div class="bk-root">
+            <div class="bk-plotdiv" id="641bc63d-95df-4be3-87cc-db374a3ea442"></div>
+        </div>
+        
+        <script type="text/javascript">
+            (function() {
+          var fn = function() {
+            Bokeh.safely(function() {
+              var docs_json = {"c6108fd0-4849-48f0-89cb-d99419e1430f":{"roots":{"references":[{"attributes":{"callback":null},"id":"b2b948d1-342a-41fa-a397-293c8eace0d1","type":"DataRange1d"},{"attributes":{"callback":null},"id":"52bc2cf2-81e5-4d8b-9e8c-56a4c0787a7a","type":"DataRange1d"},{"attributes":{"plot":{"id":"43ead15a-5f44-4a5b-b073-906ae63343bf","type":"GMapPlot"}},"id":"6cd5121c-1997-4834-849a-c6cd28b177a3","type":"PanTool"},{"attributes":{"plot":{"id":"43ead15a-5f44-4a5b-b073-906ae63343bf","type":"GMapPlot"}},"id":"387089f9-1281-4b11-9588-a8eb73e82beb","type":"WheelZoomTool"},{"attributes":{"data_source":{"id":"c11014ea-13e3-40de-b146-cc6bac345087","type":"ColumnDataSource"},"glyph":{"id":"f8049a3e-41ac-4b3a-a27e-e55cea5ea1c8","type":"Circle"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"044cbde7-35e8-472a-925b-cb2756e85cc3","type":"GlyphRenderer"},{"attributes":{"plot":null,"text":""},"id":"e34963eb-09f4-494e-ba24-82cafdf69c85","type":"Title"},{"attributes":{"active_drag":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"6cd5121c-1997-4834-849a-c6cd28b177a3","type":"PanTool"},{"id":"387089f9-1281-4b11-9588-a8eb73e82beb","type":"WheelZoomTool"}]},"id":"62238c03-803c-43c0-988b-1dccb33dcdac","type":"Toolbar"},{"attributes":{"fill_alpha":{"value":0.8},"fill_color":{"value":"#ff8856"},"line_color":{"value":"#ff8856"},"size":{"field":"size","units":"screen"},"x":{"field":"lon"},"y":{"field":"lat"}},"id":"f8049a3e-41ac-4b3a-a27e-e55cea5ea1c8","type":"Circle"},{"attributes":{"api_key":"AIzaSyAXyJ9dSb18YiSomcDX1MbpHT6n29CZybI","map_options":{"lat":49.270741428571434,"lng":-123.10868285714287,"map_type":"roadmap","zoom":11},"renderers":[{"id":"044cbde7-35e8-472a-925b-cb2756e85cc3","type":"GlyphRenderer"}],"title":{"id":"e34963eb-09f4-494e-ba24-82cafdf69c85","type":"Title"},"tool_events":{"id":"2e3e38a0-8fac-4a8f-af22-220612b30880","type":"ToolEvents"},"toolbar":{"id":"62238c03-803c-43c0-988b-1dccb33dcdac","type":"Toolbar"},"x_range":{"id":"52bc2cf2-81e5-4d8b-9e8c-56a4c0787a7a","type":"DataRange1d"},"y_range":{"id":"b2b948d1-342a-41fa-a397-293c8eace0d1","type":"DataRange1d"}},"id":"43ead15a-5f44-4a5b-b073-906ae63343bf","type":"GMapPlot"},{"attributes":{},"id":"2e3e38a0-8fac-4a8f-af22-220612b30880","type":"ToolEvents"},{"attributes":{"callback":null,"column_names":["name","lat","lon","size"],"data":{"lat":{"__ndarray__":"FAX6RJ6kSEAGnnsPl6RIQDHrxVBOpEhA3ZiesMSjSEDt9e6P96JIQLZnlgSooUhAJ/c7FAWiSEBjuaXVkKRIQKsmiLoPpEhAUKp9Oh6jSEDuztptF6JIQFovhnKioUhAx2MGKuOfSEBuTE9Y4p1IQA==","dtype":"float64","shape":[14]},"lon":{"__ndarray__":"7GmHvybHXsASoKaWrcdewEhQ/Bhzx17AyTzyBwPHXsCj6exkcMZewFHaG3xhxF7ATGw+rg3FXsAIVWr2QMdewEjElEiix17AZ+22C83HXsDzH9JvX8dewAiPNo5Yx17A7PoFu2HHXsDIQQkzbcdewA==","dtype":"float64","shape":[14]},"name":["WATERFRONT","BURRARD","GRANVILLE","STADIUM","MAINST","COMMERCIALDRIVE","VCC-CLARK","WATERFRONT","VANCOUVERCITYCENTRE","YALETOWN-ROUNDHOUSE","OLYMPICVILLAGE","BROADWAY-CITYHALL","KINGEDWARD","OAKRIDGE-41ST"],"size":{"__ndarray__":"A+7zJvt8LkDE415HCeoxQAAAAAAAACBA+x3rpnUtJEATwaTtp6AvQKEuAz511iFAQl0GfOqsG0AD7vMm+3wuQCDFjv+cdzBAAAAAAAAAIEDO0NkcIm4pQMu0+7dX8C5AQl0GfOqsG0BCXQZ86qwbQA==","dtype":"float64","shape":[14]}}},"id":"c11014ea-13e3-40de-b146-cc6bac345087","type":"ColumnDataSource"}],"root_ids":["43ead15a-5f44-4a5b-b073-906ae63343bf"]},"title":"Bokeh Application","version":"0.12.4"}};
+              var render_items = [{"docid":"c6108fd0-4849-48f0-89cb-d99419e1430f","elementid":"641bc63d-95df-4be3-87cc-db374a3ea442","modelid":"43ead15a-5f44-4a5b-b073-906ae63343bf"}];
+              
+              Bokeh.embed.embed_items(docs_json, render_items);
+            });
+          };
+          if (document.readyState != "loading") fn();
+          else document.addEventListener("DOMContentLoaded", fn);
+        })();
+        
+        </script>
+    </body>
+</html>
