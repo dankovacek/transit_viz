@@ -218,7 +218,13 @@ plot = GMapPlot(
     x_range=DataRange1d(), y_range=DataRange1d(), map_options=map_options
 )
 
-plot.api_key = 'AIzaSyAXyJ9dSb18YiSomcDX1MbpHT6n29CZybI'
+# keep the api key
+import client_secrets
+# replace 'client_secrets.send_api_key()' with your own api key in
+# string format.  This is to keep my api key off of a public repository
+# on github
+apikey = client_secrets.send_api_key()
+plot.api_key = apikey
 #fig = figure(tools='pan, wheel_zoom')#, x_range=(x_min, x_max), y_range=(y_min, y_max))#, x_range=(-bound, bound), y_range=(-bound, bound))
 circle = Circle(x='lon', y='lat', size='size', fill_alpha=0.8, fill_color='#ff8856', line_color='#ff8856')
 plot.add_glyph(source, circle)
