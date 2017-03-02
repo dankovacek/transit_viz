@@ -1,0 +1,77 @@
+DateTime,Location,Transaction,Product,Amount
+Apr-28-2016 07:22 PM,Olympic Village Stn,Tap out at Olympic Village Stn,Stored Value,0
+Apr-28-2016 07:14 PM,Vancouver City Centre Stn,Tap in at Vancouver City Centre Stn,Stored Value,-2.1
+Apr-26-2016 12:04 AM,Vancouver City Centre Stn,Tap out at Vancouver City Centre Stn,Stored Value,0
+Apr-25-2016 11:53 PM,Broadway-City Hall Stn,Tap in at Broadway-City Hall Stn,Stored Value,-2.1
+Apr-25-2016 10:06 PM,19-METROTOWN STN/STANLEY PARK,Transfer at Bus Stop 50233,Stored Value,0
+Apr-25-2016 10:03 PM,Main Street Stn,Tap out at Main Street Stn,Stored Value,0
+Apr-25-2016 09:42 PM,Brentwood Stn,Transfer at Brentwood Stn,Stored Value,0
+Apr-25-2016 09:40 PM,25-BRENTWOOD STN/UBC,Transfer at Bus Stop 58496,Stored Value,0
+Apr-25-2016 09:37 PM,25-BRENTWOOD STN/UBC,Tap in at Bus Stop 51542,Stored Value,-2.1
+Apr-25-2016 05:40 PM,Brentwood Stn,Tap out at Brentwood Stn,Stored Value,1.05
+Apr-25-2016 05:13 PM,Burrard Stn,Tap in at Burrard Stn,Stored Value,-4.2
+Apr-18-2016 10:16 PM,3-MAIN/DOWNTOWN,Transfer at Bus Stop 50237,Stored Value,0
+Apr-18-2016 10:12 PM,3-MAIN/DOWNTOWN,Transfer at Bus Stop 50233,Stored Value,0
+Apr-18-2016 10:01 PM,Main Street Stn,Tap out at Main Street Stn,Stored Value,0
+Apr-18-2016 09:39 PM,Brentwood Stn,Tap in at Brentwood Stn,Stored Value,-2.1
+Apr-18-2016 05:40 PM,Brentwood Stn,Tap out at Brentwood Stn,Stored Value,1.05
+Apr-18-2016 05:13 PM,Burrard Stn,Tap in at Burrard Stn,Stored Value,-4.2
+Apr-17-2016 12:41 AM,Vancouver City Centre Stn,Tap out at Vancouver City Centre Stn,Stored Value,0
+Apr-17-2016 12:32 AM,Broadway-City Hall Stn,Tap in at Broadway-City Hall Stn,Stored Value,-2.1
+Apr-15-2016 07:06 PM,Stadium Stn,Tap out at Stadium Stn,Stored Value,0
+Apr-15-2016 07:01 PM,Burrard Stn,Tap in at Burrard Stn,Stored Value,-2.1
+Apr-15-2016 01:08 PM,Vancouver City Centre Stn,Tap out at Vancouver City Centre Stn,Stored Value,2.1
+Apr-15-2016 12:59 PM,Broadway-City Hall Stn,Tap in at Broadway-City Hall Stn,Stored Value,-4.2
+Apr-12-2016 03:45 PM,Granville Stn,Tap out at Granville Stn,Stored Value,2.1
+Apr-12-2016 03:37 PM,Main Street Stn,Transfer at Main Street Stn,Stored Value,-2.1
+Apr-12-2016 02:52 PM,Main Street Stn,Tap out at Main Street Stn,Stored Value,2.1
+Apr-12-2016 02:46 PM,Burrard Stn,Tap in at Burrard Stn,Stored Value,-4.2
+Apr-11-2016 10:19 PM,3-MAIN/DOWNTOWN,Transfer at Bus Stop 50237,Stored Value,0
+Apr-11-2016 10:16 PM,3-MAIN/DOWNTOWN,Transfer at Bus Stop 50233,Stored Value,0
+Apr-11-2016 10:12 PM,Main Street Stn,Tap out at Main Street Stn,Stored Value,0
+Apr-11-2016 09:52 PM,Brentwood Stn,Tap in at Brentwood Stn,Stored Value,-2.1
+Apr-11-2016 05:34 PM,Brentwood Stn,Tap out at Brentwood Stn,Stored Value,1.05
+Apr-11-2016 05:09 PM,Burrard Stn,Tap in at Burrard Stn,Stored Value,-4.2
+Apr-09-2016 11:41 PM,Vancouver City Centre Stn,Tap out at Vancouver City Centre Stn,Stored Value,0
+Apr-09-2016 11:30 PM,King Edward Stn,Tap in at King Edward Stn,Stored Value,-2.1
+Apr-07-2016 12:41 PM,Vancouver City Centre Stn,Tap out at Vancouver City Centre Stn,Stored Value,2.1
+Apr-07-2016 12:33 PM,Broadway-City Hall Stn,Tap in at Broadway-City Hall Stn,Stored Value,-4.2
+Apr-04-2016 10:06 PM,Burrard Stn,Tap out at Burrard Stn,Stored Value,0
+Apr-04-2016 09:44 PM,Brentwood Stn,Tap in at Brentwood Stn,Stored Value,-2.1
+Apr-04-2016 04:49 PM,Gilmore Stn,Tap out at Gilmore Stn,Stored Value,1.05
+Apr-04-2016 04:28 PM,Burrard Stn,Tap in at Burrard Stn,Stored Value,-4.2
+Apr-01-2016 11:22 PM,Vancouver City Centre Stn,Tap out at Vancouver City Centre Stn,Stored Value,0
+Apr-01-2016 11:13 PM,Olympic Village Stn,Tap in at Olympic Village Stn,Stored Value,-2.1
+Apr-01-2016 07:25 PM,Olympic Village Stn,Tap out at Olympic Village Stn,Stored Value,0
+Apr-01-2016 07:19 PM,Vancouver City Centre Stn,Tap in at Vancouver City Centre Stn,Stored Value,-2.1
+Mar-26-2016 06:14 PM,Waterfront Stn,Refund at Waterfront Stn,Stored Value,2.1
+Mar-26-2016 06:12 PM,Waterfront Stn,Tap in at Waterfront Stn,Stored Value,-2.1
+Mar-25-2016 05:01 PM,Vancouver City Centre Stn,Tap out at Vancouver City Centre Stn,Stored Value,0
+Mar-25-2016 04:52 PM,Broadway-City Hall Stn,Transfer at Broadway-City Hall Stn,Stored Value,0
+Mar-25-2016 04:17 PM,Broadway-City Hall Stn,Tap out at Broadway-City Hall Stn,Stored Value,0
+Mar-25-2016 04:10 PM,Vancouver City Centre Stn,Tap in at Vancouver City Centre Stn,Stored Value,-2.1
+Mar-25-2016 12:21 AM,Burrard Stn,Tap out at Burrard Stn,Stored Value,0
+Mar-25-2016 12:11 AM,Main Street Stn,Tap in at Main Street Stn,Stored Value,-2.1
+Mar-19-2016 01:01 PM,Burrard Stn,Tap out at Burrard Stn,Stored Value,0
+Mar-19-2016 12:56 PM,Main Street Stn,Tap in at Main Street Stn,Stored Value,-2.1
+Mar-08-2016 09:31 PM,Burrard Stn,Tap out at Burrard Stn,Stored Value,0
+Mar-08-2016 09:25 PM,Main Street Stn,Tap in at Main Street Stn,Stored Value,-2.1
+Mar-04-2016 07:25 PM,Burrard Stn,Tap out at Burrard Stn,Stored Value,0
+Mar-04-2016 07:15 PM,Commercial-Broadway Stn,Tap in at Commercial-Broadway Stn,Stored Value,-2.1
+Mar-04-2016 05:06 PM,Gilmore Stn,Tap out at Gilmore Stn,Stored Value,1.05
+Mar-04-2016 04:43 PM,Burrard Stn,Tap in at Burrard Stn,Stored Value,-4.2
+Mar-04-2016 09:18 AM,Vancouver City Centre Stn,Tap out at Vancouver City Centre Stn,Stored Value,2.1
+Mar-04-2016 09:05 AM,Oakridge-41st Stn,Transfer at Oakridge-41st Stn,Stored Value,-2.1
+Mar-04-2016 07:48 AM,Oakridge-41st Stn,Tap out at Oakridge-41st Stn,Stored Value,2.1
+Mar-04-2016 07:37 AM,Vancouver City Centre Stn,Tap in at Vancouver City Centre Stn,Stored Value,-4.2
+Feb-07-2016 11:41 PM,Vancouver City Centre Stn,Tap out at Vancouver City Centre Stn,Stored Value,0
+Feb-07-2016 11:16 PM,YVR-Airport Stn,Tap in at YVR-Airport Stn,Stored Value,-7.1
+Jan-28-2016 11:05 AM,YVR-Airport Stn,Tap out at YVR-Airport Stn,Stored Value,1.05
+Jan-28-2016 10:36 AM,Vancouver City Centre Stn,Tap in at Vancouver City Centre Stn,Stored Value,-4.2
+Jan-12-2016 06:41 PM,Waterfront Stn,Tap out at Waterfront Stn,Stored Value,0
+Jan-12-2016 06:37 PM,Burrard Stn,Tap in at Burrard Stn,Stored Value,-2.1
+Jan-09-2016 01:03 PM,Stadium Stn,Tap out at Stadium Stn,Stored Value,0
+Jan-09-2016 12:58 PM,Burrard Stn,Tap in at Burrard Stn,Stored Value,-2.1
+Jan-02-2016 04:07 PM,Vancouver City Centre Stn,Tap out at Vancouver City Centre Stn,Stored Value,0
+Jan-02-2016 04:00 PM,Broadway-City Hall Stn,Tap in at Broadway-City Hall Stn,Stored Value,-2.1
+Jan-02-2016 04:00 PM,Broadway-City Hall Stn,Missing Tap out,Stored Value,0

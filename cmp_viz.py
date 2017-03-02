@@ -40,34 +40,36 @@ from bokeh.models.markers import Circle
 
 DATA_PATH = os.path.dirname(os.path.abspath(__file__))
 
-def load_trip_summary(f):
+def load_trip_summary(file_list):
     """
     Takes the output csv from the Vancouver Translink
     Compass card account and returns the data in a dataframe.
     """
-    file_path = DATA_PATH + '/' + f
-    # initialize a list for the regional data rows
-    q_msmts = []
-    with open(file_path, 'rU') as csvfile:
-        # Note that the example csv was TAB DELIMITED
-        q_file = csv.reader(csvfile)
-        for row in q_file:
-            # A proper implementation of checking the header format
-            # will be needed.  This is a temporary solution and a bad idea.
-            if row[0] == 'DateTime':
-                headers = [row[0], 'date_str', row[1], row[2], row[3], row[4]]
-                #pressure_index = row.index('Stn Press (kPa)')
-            else:
-                datetime = pd.to_datetime(row[0])
-                date_str = row[0]
-                location = row[1].upper()
-                location = location.replace('STREET', 'ST')
-                location = location.replace(' ', '')[:-3]
-                transaction = row[2]
-                product = row[3]
-                amount = float(row[4])
+    # initialize a list for the card interactions
+    card_action = []
+    trip_dataframe = pd.DataFrame()
 
-                q_msmts += [[datetime, date_str, location, transaction, product, amount]]
+    for file_path in file_list:
+        with open(file_path, 'rU') as csvfile:
+            # Note that the example csv was TAB DELIMITED
+            compass_file = csv.reader(csvfile)
+            for row in compass_file:
+                # A proper implementation of checking the header format
+                # will be needed.  This is a temporary solution and a bad idea.
+                if row[0] == 'DateTime':
+                    headers = row
+                else:
+                    datetime = pd.to_datetime(row[0])
+                    print(datetime)
+                    date_str = row[0]
+                    location = row[1].upper()
+                    location = location.replace('STREET', 'ST')
+                    location = location.replace(' ', '')[:-3]
+                    transaction = row[2]
+                    product = row[3]
+                    amount = float(row[4])
+
+                    card_action += [[datetime, date_str, location, transaction, product, amount]]
 
     return pd.DataFrame(q_msmts, columns=headers)
 
@@ -137,11 +139,9 @@ def parse_kml(f):
 
     return pd.DataFrame(station_df, columns=header)
 
-
-
-transit_history_file = 'compass_card_history.csv'
+file_list = glob.glob(DATA_PATH + '/data/*.csv')
 # load the discharge summary into a pandas dataframe
-trips_df = load_trip_summary(transit_history_file)
+trips_df = load_trip_summary(file_list)
 
 # parse the kml file of translink stations within CoV limits
 station_kml = 'rapid_transit_stations.kml'
@@ -165,69 +165,77 @@ for e in trips_df['Location'].iteritems():
 # determine the total number of trips
 total_trips = sum([locations[e] for e in locations.keys()])
 
-normalized_trips = [(e, float(locations[e] / total_trips)) for e in locations.keys()]
-#print('normalized trips: ', normalized_trips)
-#now put the renamed station csv back in order
-station_list_file = 'CoV_Translink_Stns_formatted2017February21.csv'
-stations_df = pd.DataFrame()
-temp_places = []
-temp_lat = []
-temp_lon = []
-temp_visits = []
-with open(station_list_file, 'rU') as csvfile:
-    for e in csvfile:
-        temp_list = e.split(',')
-        if temp_list[0] is not '':
-            if temp_list[1] in locations.keys():
-                lt = round(float(temp_list[2].strip()), 5)
-                ln = round(float(temp_list[3].strip()), 5)
-                zoom = 18
-                # convert to WMTS
-                #lt1, ln1 = deg2num(lt, ln, zoom)
-                temp_lat += [lt]
-                temp_lon += [ln]
-                temp_places += [temp_list[1]]
-                temp_visits += [locations[temp_list[1]]]
+# Find all 31 day periods with minimum 32 one-way trips
+# "the card is used to make at least 32 one-way
+# trips over a maximum of 31 consecutive days"
+for i in range(len(trips_df['DateTime'])):
+    print(trips_df.ix[i])
 
-    # convert lat and lon to WMTS format
-    stations_df['stations'] = temp_places
-    stations_df['lat'] = temp_lat
-    stations_df['lon'] = temp_lon
+# START Trip Visualization
 
-    #normalize the visits so the numbers will represent a plot size
-    #between 5 and 50
-    normalized_visits = [float(e/total_trips) for e in temp_visits]
-    normalized_visits = [2*math.log2(round((e/5)*10**4, 0)) for e in normalized_visits]
-    stations_df['size'] = normalized_visits
+# normalized_trips = [(e, float(locations[e] / total_trips)) for e in locations.keys()]
+# #print('normalized trips: ', normalized_trips)
+# #now put the renamed station csv back in order
+# station_list_file = 'CoV_Translink_Stns_formatted2017February21.csv'
+# stations_df = pd.DataFrame()
+# temp_places = []
+# temp_lat = []
+# temp_lon = []
+# temp_visits = []
+# with open(station_list_file, 'rU') as csvfile:
+#     for e in csvfile:
+#         temp_list = e.split(',')
+#         if temp_list[0] is not '':
+#             if temp_list[1] in locations.keys():
+#                 lt = round(float(temp_list[2].strip()), 5)
+#                 ln = round(float(temp_list[3].strip()), 5)
+#                 zoom = 18
+#                 # convert to WMTS
+#                 #lt1, ln1 = deg2num(lt, ln, zoom)
+#                 temp_lat += [lt]
+#                 temp_lon += [ln]
+#                 temp_places += [temp_list[1]]
+#                 temp_visits += [locations[temp_list[1]]]
 
-source = ColumnDataSource(
-    data=dict(
-        name=stations_df['stations'],
-        lat=stations_df['lat'],
-        lon=stations_df['lon'],
-        size=stations_df['size'],
-        )
-    )
+#     # convert lat and lon to WMTS format
+#     stations_df['stations'] = temp_places
+#     stations_df['lat'] = temp_lat
+#     stations_df['lon'] = temp_lon
 
-x_mean = np.mean([e for e in stations_df['lat']])
-y_mean = np.mean([e for e in stations_df['lon']])
-# map the data
-map_options = GMapOptions(lat=x_mean, lng=y_mean, map_type="roadmap", zoom=11)
+#     #normalize the visits so the numbers will represent a plot size
+#     #between 5 and 50
+#     normalized_visits = [float(e/total_trips) for e in temp_visits]
+#     normalized_visits = [2*math.log2(round((e/5)*10**4, 0)) for e in normalized_visits]
+#     stations_df['size'] = normalized_visits
 
-plot = GMapPlot(
-    x_range=DataRange1d(), y_range=DataRange1d(), map_options=map_options
-)
+# source = ColumnDataSource(
+#     data=dict(
+#         name=stations_df['stations'],
+#         lat=stations_df['lat'],
+#         lon=stations_df['lon'],
+#         size=stations_df['size'],
+#         )
+#     )
 
-# keep the api key
-import client_secrets
-# replace 'client_secrets.send_api_key()' with your own api key in
-# string format.  This is to keep my api key off of a public repository
-# on github
-apikey = client_secrets.send_api_key()
-plot.api_key = apikey
-#fig = figure(tools='pan, wheel_zoom')#, x_range=(x_min, x_max), y_range=(y_min, y_max))#, x_range=(-bound, bound), y_range=(-bound, bound))
-circle = Circle(x='lon', y='lat', size='size', fill_alpha=0.8, fill_color='#ff8856', line_color='#ff8856')
-plot.add_glyph(source, circle)
-plot.add_tools(PanTool(), WheelZoomTool())
-show(plot)
+# x_mean = np.mean([e for e in stations_df['lat']])
+# y_mean = np.mean([e for e in stations_df['lon']])
+# # map the data
+# map_options = GMapOptions(lat=x_mean, lng=y_mean, map_type="roadmap", zoom=11)
+
+# plot = GMapPlot(
+#     x_range=DataRange1d(), y_range=DataRange1d(), map_options=map_options
+# )
+
+# # keep the api key
+# import client_secrets
+# # replace 'client_secrets.send_api_key()' with your own api key in
+# # string format.  This is to keep my api key off of a public repository
+# # on github
+# apikey = client_secrets.send_api_key()
+# plot.api_key = apikey
+# #fig = figure(tools='pan, wheel_zoom')#, x_range=(x_min, x_max), y_range=(y_min, y_max))#, x_range=(-bound, bound), y_range=(-bound, bound))
+# circle = Circle(x='lon', y='lat', size='size', fill_alpha=0.8, fill_color='#ff8856', line_color='#ff8856')
+# plot.add_glyph(source, circle)
+# plot.add_tools(PanTool(), WheelZoomTool())
+# show(plot)
 
