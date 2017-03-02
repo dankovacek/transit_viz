@@ -1,7 +1,7 @@
 compass_card_history.csv
 client_secrets.py
 
-data/*.csv
+/data/*.csv
 *.ods
 *.kml
 *.kmz
