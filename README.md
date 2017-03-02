@@ -4,6 +4,7 @@
 
 1.  Log into your <a href="https://www.compasscard.ca/">compass account</a>
 2.  Download all transactions from your desired tax year.  At the time of writing, Compass permitted a maximum 90 day period for downloading your usage history so you'll have to do this a few times to get the whole year.
+<img src='images/filter_download.jpg'>
 3.  Move all the csv files you downloaded to the '/data' folder.
 
 The filter on the compass website might still be a bit wonky, so don't worry if you get some duplicate dates, or entries with dates outside the tax year you want.  These anomalies are taken care of.
@@ -18,7 +19,7 @@ The filter on the compass website might still be a bit wonky, so don't worry if 
 7.  If you're a hero to all those good folks who do public service by using transit and not contributing to traffic, make it into a publicly available, free web app!
 
 ## License & Disclaimer
-The author does not guarantee accuracy of the information provided.  Use at your own peril.
+The author does not guarantee accuracy of the results provided by running this code.  Use at your own peril.
 
 ## License
 
