@@ -82,7 +82,7 @@ trips_df = trips_df.sort_values(by='DateTime')
 # 32 one-way trips over a maximum 31 consecutive days
 # http://www.cra-arc.gc.ca/tx/ndvdls/tpcs/ncm-tx/rtrn/cmpltng/ddctns/lns360-390/364/lgblty-eng.html
 
-min_trips = 28
+min_trips = 32
 min_days = pd.Timedelta('31 days')
 
 first_day = min(trips_df['DateTime'])
