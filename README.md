@@ -14,13 +14,15 @@ The filter on the compass website might still be a bit wonky, so don't worry if 
 
 5.  The printed output should tell you your eligible transit usage date range, and the total value spent in that time period, which *if the code is correct* corresponds to the Deduction Amount.
 
-6.  If you're really keen, improve the code (it's really bad, yeah.), documentation, or functionality.
+7.  If you use this for your taxes this year, I'd love to hear about it!  (@postnostills)
 
-7.  If you're a hero to all those good folks who do public service by using transit and not contributing to traffic, make it into a publicly available, free web app!
+8.  If you're really keen, improve the code (it's really bad, yeah.), documentation, or functionality.
+
+9.  If you're a hero to all those good folks who do public service by using transit and not contributing to traffic, make it into a publicly available, free web app!
 
 ## License & Disclaimer
 The author does not guarantee accuracy of the results provided by running this code.  Use at your own peril.
 
-## License
+The author is not and has never been affiliated with Compass, Translink, or anything, anytime, ever.
 
 <a href="https://creativecommons.org/licenses/by-nc/2.0/ca/">Attribution-NonCommercial 2.0 Canada (CC BY-NC 2.0 CA)</a>
